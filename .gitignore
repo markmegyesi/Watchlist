@@ -1,5 +1,5 @@
-new_blog/blog/__pycache__/
-new_blog/blog/migrations/0002_remove_moviemodel_user.py
-new_blog/blog/migrations/__pycache__/
-new_blog/new_blog/__pycache__/
-new_blog/db.sqlite3
+watchlist/list/__pycache__/
+watchlist/list/migrations/0002_remove_moviemodel_user.py
+watchlist/list/migrations/__pycache__/
+watchlist/watchlist/__pycache__/
+watchlist/db.sqlite3

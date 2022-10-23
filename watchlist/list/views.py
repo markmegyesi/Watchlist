@@ -15,7 +15,7 @@ def home(request):
           'movies': movies
      }
      
-     return(render(request, 'blog/home.html', context=context))
+     return(render(request, 'list/home.html', context=context))
 
      
 
@@ -24,7 +24,7 @@ def watched(request):
      context = {
           'movies': movies
      }
-     return(render(request, 'blog/watched.html', context=context))
+     return(render(request, 'list/watched.html', context=context))
      
 
 def mark_as_watched(request,id):
@@ -33,4 +33,4 @@ def mark_as_watched(request,id):
           movie = MovieModel.objects.get(id=id)
           movie.is_watched = 'yes'
           movie.save()
-     return HttpResponseRedirect(reverse('blog_home'))
+     return HttpResponseRedirect(reverse('list_home'))

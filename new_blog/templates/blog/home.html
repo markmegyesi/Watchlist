@@ -1,0 +1,26 @@
+{% extends 'blog/base.html'%}
+{% block content %}
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    {% for movie in movies %}
+    {% if movie.is_watched == 'no' %}
+    <div class="col">
+        <div class="card" style="width: 18rem; height: 13rem;">
+            <div class="card-body">
+
+                <h5 class="card-title">{{movie.title}}</h5>
+                <p class="card-text">Producer : {{movie.producer}} <br>
+                    Release year: {{movie.release_year}}</p>
+                <form action="mark_as_watched/{{ movie.id }}" method="post">
+                    {% csrf_token %}
+                    <button class="btn btn-outline-info" type="submit">Watched</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+</div>
+
+
+{% endblock %}
